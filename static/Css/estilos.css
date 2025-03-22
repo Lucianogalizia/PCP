@@ -3,22 +3,24 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Barra de navegación */
-.navbar {
-  background-color: #343a40; /* Gris oscuro */
+/* Sobrescribe la clase bg-primary en la barra de navegación */
+.navbar.bg-primary {
+  background-color: #343a40 !important; /* Gris oscuro */
 }
 
-.navbar-brand, .navbar-nav .nav-link {
+/* Cambia el color de los enlaces en la navbar a amarillo patito */
+.navbar-brand,
+.navbar-nav .nav-link {
   color: #F7DC6F !important; /* Amarillo patito */
 }
 
-/* Pie de página */
+/* Pie de página con gris oscuro y texto en amarillo patito */
 footer {
-  background-color: #343a40; /* Gris oscuro */
-  color: #F7DC6F;
+  background-color: #343a40 !important;
+  color: #F7DC6F !important;
 }
 
-/* Formularios */
+/* Estilos para formularios */
 form {
   background-color: #ffffff;
   padding: 20px;
@@ -26,15 +28,16 @@ form {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Botones primarios */
+/* Botones primarios en amarillo patito con texto en gris oscuro */
 .btn-primary {
-  background-color: #F7DC6F; /* Amarillo patito */
-  border-color: #F7DC6F;
-  color: #343a40; /* Texto en gris oscuro */
+  background-color: #F7DC6F !important;
+  border-color: #F7DC6F !important;
+  color: #343a40 !important;
 }
 
 .btn-primary:hover {
-  background-color: #F1C40F; /* Una tonalidad ligeramente distinta para el hover */
-  border-color: #F1C40F;
+  background-color: #F1C40F !important; /* tonalidad ligeramente distinta */
+  border-color: #F1C40F !important;
 }
+
 
