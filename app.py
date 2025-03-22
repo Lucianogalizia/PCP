@@ -752,7 +752,7 @@ def flujo_f_decidir():
     abandono = request.form.get("abandono")
     if abandono == "NO":
         # Si responde NO, se salta este flujo y se pasa al siguiente (Flujo G o H)
-        return redirect(url_for("flujo_g"))
+        return redirect(url_for("flujo_h"))
     elif abandono == "SI":
         return redirect(url_for("flujo_f_filtros"))
     else:
@@ -827,36 +827,11 @@ def flujo_f_cantidades():
         final_df_renombrado = renombrar_columnas(filtered_df)
         materiales_finales.append(("FLUJO F", final_df_renombrado))
         # En lugar de imprimir, se guarda para consolidar al final
-        return redirect(url_for("flujo_g"))
+        return redirect(url_for("flujo_h"))
     else:
         if not display_diametros:
             return "No se encontraron DIÁMETRO seleccionados.", 400
         return render_template("flujo_f_cantidades.html", selected_diametros=display_diametros)
-
-
-@app.route("/flujo_g", methods=["GET", "POST"])
-@app.route("/flujo_g", methods=["GET", "POST"])
-def flujo_g():
-    if request.method == "POST":
-        wo = request.form.get("wo")
-        if wo == "SI":
-            file_path = os.path.join(BASE_DIR, "WO.xlsx")
-            try:
-                df = pd.read_excel(file_path)
-            except Exception as e:
-                return f"Error al cargar Excel: {e}"
-            df_renombrado = renombrar_columnas(df)
-            # Solo almacenamos los materiales, sin imprimirlos aún
-            materiales_finales.append(("FLUJO G", df_renombrado))
-            # Redirigimos al flujo H para continuar el proceso
-            return redirect(url_for("flujo_h"))
-        elif wo == "NO":
-            # En caso de NO, simplemente redirigimos al flujo H
-            return redirect(url_for("flujo_h"))
-        else:
-            return "Selecciona una opción.", 400
-    else:
-        return render_template("flujo_g.html")
 
 
 
