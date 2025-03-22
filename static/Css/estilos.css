@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Sobrescribe la clase bg-primary en la barra de navegación */
+/* Sobrescribe la clase bg-primary en la navbar */
 .navbar.bg-primary {
   background-color: #343a40 !important; /* Gris oscuro */
 }
@@ -14,21 +14,13 @@ body {
   color: #F7DC6F !important; /* Amarillo patito */
 }
 
-/* Pie de página con gris oscuro y texto en amarillo patito */
+/* Pie de página: gris oscuro con texto amarillo patito */
 footer {
   background-color: #343a40 !important;
   color: #F7DC6F !important;
 }
 
-/* Estilos para formularios */
-form {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Botones primarios en amarillo patito con texto en gris oscuro */
+/* Botones primarios en amarillo patito con texto gris oscuro */
 .btn-primary {
   background-color: #F7DC6F !important;
   border-color: #F7DC6F !important;
@@ -39,5 +31,6 @@ form {
   background-color: #F1C40F !important; /* tonalidad ligeramente distinta */
   border-color: #F1C40F !important;
 }
+
 
 
